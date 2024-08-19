@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const layout = () => {
-  return (
-    <div>layout</div>
-  )
-}
+const LayoutWebsite = () => {
+    return (
+        <>
+            <header>header</header>
+            <footer>footer</footer>
+        </>
+    );
+};
 
-export default layout
+export default LayoutWebsite;

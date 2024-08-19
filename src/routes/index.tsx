@@ -1,9 +1,14 @@
-import React from 'react'
+import LayoutWebsite from "@/pages/(website)/layout";
+import { Route, Routes } from "react-router-dom";
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+const Router = () => {
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<LayoutWebsite />}></Route>
+            </Routes>
+        </>
+    );
+};
 
-export default index
+export default Router;
