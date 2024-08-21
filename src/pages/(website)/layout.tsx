@@ -1,9 +1,10 @@
-import Header from "./_components/Header";
+import { Outlet } from "react-router-dom";
+
 
 const LayoutWebsite = () => {
     return (
         <>
-            <Header />
+            <Outlet />
         </>
     );
 };
