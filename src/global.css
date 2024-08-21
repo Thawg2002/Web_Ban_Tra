@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
     :root {
         --background: 0 0% 100%;
         --foreground: 222.2 84% 4.9%;
@@ -73,4 +73,14 @@
     body {
         @apply bg-background text-foreground;
     }
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    @apply font-roboto;
+}
+.padding {
+    @apply px-[10px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[50px] 2xl:px-[60px];
 }
