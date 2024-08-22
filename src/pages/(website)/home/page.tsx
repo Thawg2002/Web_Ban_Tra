@@ -480,7 +480,11 @@ const HomePage = () => {
                     <div>
                         <h1>Hotline đặt hàng</h1>
                         <p>0987-6666-8888</p>
-                        <img src={zalo_image} alt="" className="max-w-[150px]" />
+                        <img
+                            src={zalo_image}
+                            alt=""
+                            className="max-w-[150px]"
+                        />
                     </div>
                 </div>
             </footer>
