@@ -65,7 +65,7 @@ const Banner = () => {
                 <div className="relative">
                     <img src={`${banner_banh_trung_thu_4}`} alt="" />
                     <div className="absolute right-0 top-0 bottom-0 flex flex-col px-[15px] lg:justify-center lg:items-end">
-                        <h2 className="text-[#000] text-[73px] mx-auto font-normall mt-0 mr-[10%] mb-[25px] ml-[15%] ">
+                        <h2 className="text-[#000] text-[73px] mx-auto font-normall mt-0 mr-[10%] mb-[25px] ml-[15%] md:text-end">
                             Bánh Trung Thu 2024
                         </h2>
                         <div className="mt-0 mr-[10%] mb-[25px] ml-[15%] ">
