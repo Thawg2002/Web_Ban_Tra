@@ -8,6 +8,11 @@ html {
 body {
     @apply font-roboto;
 }
+.container {
+    max-width: 940px;
+    padding: 0 15px;
+    margin: 0 auto !important;
+}
 .padding {
     @apply px-[10px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[50px] 2xl:px-[60px];
 }
