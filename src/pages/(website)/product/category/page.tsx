@@ -148,7 +148,7 @@ const ProductCategory = () => {
                                     <span className="ml-1">&#9662;</span>
                                 </button>
                                 {isOpen && (
-                                    <div className="absolute right-0 mt-2 w-full md:w-48 bg-white border border-gray-200 rounded shadow-lg">
+                                    <div className="absolute right-0 mt-2 w-full md:w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
                                         <ul className="py-2 text-sm text-gray-700">
                                             <li>
                                                 <a
