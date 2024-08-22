@@ -17,21 +17,19 @@ const ProductCategory = () => {
         <div>
             <Header />
             <div className="text-center mt-10">
-                <h1 className="text-4xl font-semibold">Trà Xanh</h1>
-                <p className="text-gray-600 text-lg mt-4 mx-96">
+                <h1 className="text-2xl md:text-4xl font-semibold">Trà Xanh</h1>
+                <p className="text-gray-600 text-sm md:text-lg mt-4 mx-4 md:mx-96">
                     Các chuyên gia của Trà Việt đi khắp các vùng trà từ Tây Bắc,
                     Thái Nguyên đến Bảo Lộc để lựa chọn ra 12 loại trà xanh cao
                     cấp nhất Việt Nam.
                 </p>
-                <p className="text-xl text-gray-600">
+                <p className="text-sm md:text-xl text-gray-600 mt-4">
                     Tham khảo:
-                    <a className="text-red-600 mx-2 mt-4 inline-block">
-                        TRÀ TẾT
-                    </a>
+                    <a className="text-red-600 mx-2 inline-block">TRÀ TẾT</a>
                 </p>
             </div>
-            <div className="flex mx-10">
-                <div className="w-1/6 p-4">
+            <div className="flex flex-col md:flex-row mx-4 md:mx-10 mt-5">
+                <div className="md:w-1/6 p-4">
                     <h2 className="font-semibold text-lg">DANH MỤC SẢN PHẨM</h2>
                     <ul className="mt-4 space-y-2">
                         <li className="flex items-center justify-between">
@@ -75,19 +73,19 @@ const ProductCategory = () => {
                         </h3>
                         <div className="mt-4">
                             <input type="range" className="w-full" />
-                            <div className="flex justify-between mt-2 text-sm text-gray-600">
+                            <div className="flex justify-between mt-2 text-xs md:text-sm text-gray-600">
                                 <span>0 đ</span>
                                 <span>9.999.000 đ</span>
                             </div>
-                            <button className="mt-4 bg-red-600 text-white py-2 px-4 rounded">
+                            <button className="mt-4 bg-red-600 text-white py-2 px-4 rounded text-xs md:text-base">
                                 LỌC
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div className="w-5/6 p-4">
-                    <div className="flex">
+                <div className="md:w-5/6 p-4">
+                    <div className="flex flex-col md:flex-row">
                         <div className="flex-grow">
                             <nav className="text-gray-500 text-xs">
                                 <a href="#" className="hover:text-gray-700">
@@ -117,19 +115,17 @@ const ProductCategory = () => {
                             </nav>
                         </div>
 
-                        <div className="w-1/6 text-right">
+                        <div className="w-full md:w-1/6 text-right mt-4 md:mt-0">
                             <div className="relative">
                                 <button
                                     onClick={toggleDropdown}
                                     className="text-gray-700 font-medium"
                                 >
                                     THỨ TỰ MẶC ĐỊNH
-                                    <span className="ml-1">&#9662;</span>{" "}
-                                    {/* Mũi tên */}
+                                    <span className="ml-1">&#9662;</span>
                                 </button>
-                                {/* Dropdown */}
                                 {isOpen && (
-                                    <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg">
+                                    <div className="absolute right-0 mt-2 w-full md:w-48 bg-white border border-gray-200 rounded shadow-lg">
                                         <ul className="py-2 text-sm text-gray-700">
                                             <li>
                                                 <a
@@ -170,7 +166,7 @@ const ProductCategory = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-8 mt-5 mb-5">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-5 mb-5">
                         <div className="text-center">
                             <img
                                 src={tra_o_long}
@@ -234,7 +230,7 @@ const ProductCategory = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="grid grid-cols-4 gap-8 mt-5 mb-5">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-5 mb-5">
                         <div className="text-center">
                             <img
                                 src={tra_o_long}
