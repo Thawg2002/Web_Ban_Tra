@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import {
+    banner_banh_trung_thu_5,
+    banner_qua_tet_scaled,
     hong_tra_hagiang,
     hong_tra_hagiang2,
     tra_co_thu,
@@ -29,6 +31,7 @@ import {
     tra_thiet_quan_am2,
     tra_tuyet,
     tra_tuyet_zoom,
+    zalo_image,
 } from "@/assets/img";
 
 const ProductCategory = () => {
@@ -692,6 +695,49 @@ const ProductCategory = () => {
                     nhau: trà xanh, trà ô long hoặc trà đen.
                 </p>
             </div>
+            <div className="my-4 md:grid md:grid-cols-2 mt-[40px] ">
+                <div className="relative h-[160px] md:h-auto mb-4 md:h-[430px]">
+                    <img
+                        src={banner_banh_trung_thu_5}
+                        alt=""
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                        <h1 className="text-[#fff] text-[40px]">
+                            Bánh Trung Thu 2024
+                        </h1>
+                        <hr className="w-full max-w-[100px] my-2" />
+                        <h2 className="text-[#fff]">ĐÚC LOGO LÊN BÁNH</h2>
+                    </div>
+                </div>
+                <div className="relative h-[160px] md:h-auto md:h-[430px]">
+                    <img
+                        src={banner_qua_tet_scaled}
+                        alt=""
+                        className="w-full h-full object-cover "
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                        <h1 className="text-[#fff] text-[40px]">
+                            Qùa Tết doanh nghiệp 2024
+                        </h1>
+                        <hr className="w-full max-w-[100px] my-2" />
+                        <h2 className="text-[#fff]">QÙA TẾT IN LOGO</h2>
+                    </div>
+                </div>
+            </div>
+            <footer className="bg-[#efefef] pt-[60px] pb-[30px]">
+                <div className="px-[50px]">
+                    <div>
+                        <h1>Hotline đặt hàng</h1>
+                        <p>0987-6666-8888</p>
+                        <img
+                            src={zalo_image}
+                            alt=""
+                            className="max-w-[150px]"
+                        />
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };
