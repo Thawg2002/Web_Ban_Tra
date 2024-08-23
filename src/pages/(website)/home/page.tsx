@@ -6,7 +6,12 @@ import {
     banner_qua_tet_scaled,
     hop_tri_an_open,
     hop_tri_ki_open,
+    kinh_doanh_tra_viet,
     loai_hat_dinh_duong,
+    logo_amazon,
+    logo_bo_cong_thuong,
+    logo_lazada,
+    logo_shoppe,
     tra_tuyet_zoom,
     zalo_image,
 } from "@/assets/img";
@@ -446,11 +451,11 @@ const HomePage = () => {
             </div>
             {/* BANNER BOTTOM */}
             <div className="my-4 md:grid md:grid-cols-2 mt-[40px] ">
-                <div className="relative h-[160px] md:h-auto mb-4 md:h-[430px]">
+                <div className="relative h-[160px]  mb-4 md:h-[430px]">
                     <img
                         src={banner_banh_trung_thu_5}
                         alt=""
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover "
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                         <h1 className="text-[#fff] text-[40px]">
@@ -460,11 +465,11 @@ const HomePage = () => {
                         <h2 className="text-[#fff]">ĐÚC LOGO LÊN BÁNH</h2>
                     </div>
                 </div>
-                <div className="relative h-[160px] md:h-auto md:h-[430px]">
+                <div className="relative h-[160px] md:h-[430px]">
                     <img
                         src={banner_qua_tet_scaled}
                         alt=""
-                        className="w-full h-full object-cover "
+                        className="w-full h-full object-cover  "
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                         <h1 className="text-[#fff] text-[40px]">
@@ -475,20 +480,91 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <footer className="bg-[#efefef] pt-[60px] pb-[30px]">
-                <div className="px-[50px]">
-                    <div>
-                        <h1>Hotline đặt hàng</h1>
-                        <p>0987-6666-8888</p>
+            <footer className="bg-[#efefef] pt-[80px] pb-[30px] text-[#868686] mt-[20px]">
+                <div className="px-[50px] lg:grid lg:grid-cols-4 *:mt-[50px] *:lg:mt-[0px]">
+                    <div className="px-[10px] ">
+                        <h1 className="mb-[10px]">Hotline đặt hàng</h1>
+                        <p className="mb-[10px] text-[30px]">0987-6666-8888</p>
                         <img
                             src={zalo_image}
+                            alt=""
+                            className="max-w-[150px] mb-[30px]"
+                        />
+                        <img
+                            src={kinh_doanh_tra_viet}
+                            alt=""
+                            className="max-w-[250px]"
+                        />
+                    </div>
+                    <div className="px-[10px] ">
+                        <h1 className="text-[18px] mb-[20px]">
+                            Hệ thống cửa hàng :
+                        </h1>
+                        <div>
+                            <h2 className="font-semibold text-[18px] mb-[20px]">
+                                TP.HỒ CHÍ MINH
+                            </h2>
+                            <p className="mb-[20px] text-[15px]">
+                                19 Hải Triều, Bến Tre, quận 1 <br />
+                                ĐT: 0987-6666-8888 <br />
+                                giờ mở cửa : 9:00 - 21:00 <br />
+                            </p>
+                        </div>
+                        <div>
+                            <h2 className="font-semibold text-[18px] mb-[20px]">
+                                HÀ NỘI
+                            </h2>
+                            <p className="mb-[20px] text-[15px]">
+                                19 Hải Triều, Bến Tre, quận 1 <br />
+                                ĐT: 0987-6666-8888 <br />
+                                giờ mở cửa : 9:00 - 21:00 <br />
+                            </p>
+                        </div>
+                        <div>
+                            <h2 className="font-semibold text-[18px] mb-[20px]">
+                                ĐÀ NẴNG
+                            </h2>
+                            <p className="mb-[20px] text-[15px]">
+                                19 Hải Triều, Bến Tre, quận 1 <br />
+                                ĐT: 0987-6666-8888 <br />
+                                giờ mở cửa : 9:00 - 21:00 <br />
+                            </p>
+                        </div>
+                    </div>
+                    <div className="px-[10px] ">
+                        <h1 className="text-[18px] mb-[20px]">
+                            Có trên các sàn TMĐT
+                        </h1>
+                        <img
+                            src={logo_amazon}
+                            alt=""
+                            className="max-w-[150px]"
+                        />
+                        <img
+                            src={logo_lazada}
+                            alt=""
+                            className="max-w-[150px]"
+                        />
+                        <img
+                            src={logo_shoppe}
+                            alt=""
+                            className="max-w-[150px]"
+                        />
+                        <img
+                            src={logo_bo_cong_thuong}
                             alt=""
                             className="max-w-[150px]"
                         />
                     </div>
+                    <div className="px-[10px] *:font-semibold *:mb-[10px]  ">
+                        <p>Trà Việt Rewards</p>
+                        <p>Giao hàng đổi trả </p>
+                        <p>Điều khoản chung</p>
+                        <p>Chính sách bảo mật</p>
+                        <p>Tuyển dụng</p>
+                    </div>
                 </div>
             </footer>
-            <div className="h-[200px]"></div>
         </>
     );
 };

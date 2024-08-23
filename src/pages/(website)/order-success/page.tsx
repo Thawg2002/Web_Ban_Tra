@@ -29,7 +29,7 @@ const OrderSuccess = () => {
                 <p className="text-gray-700 mb-6">
                     Chúng tôi đã nhận đơn hàng của bạn và sẽ gửi đi trong 5-7
                     ngày làm việc. <br />
-                    Mã đơn hàng của bạn là <strong>#B6CT3</strong>
+                    Mã đơn hàng của bạn là <strong>#B1234</strong>
                 </p>
 
                 <div className="bg-gray-100 p-4 rounded-lg mb-6">

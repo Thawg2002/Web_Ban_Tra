@@ -34,7 +34,7 @@ const Header = () => {
 
     return (
         <header
-            className={` ${isScrolled ? "bg-white" : "bg-transparent"} transition-colors duration-300`}
+            className={` ${isScrolled ? "bg-[#f6f6f6]" : "bg-transparent"} transition-colors duration-300`}
         >
             <div className="padding py-[10px]">
                 <div className=" flex justify-between lg:mx-[69px]">
