@@ -67,7 +67,7 @@ const Header = () => {
                                                 <Link to={"/tra"}>TRÀ</Link>
                                                 <ul className="absolute left-full top-0 w-[250px] bg-white shadow-lg hidden group-hover/item:block font-normal ">
                                                     <li className="px-4 py-2 hover:bg-gray-100">
-                                                        <Link to={"/tra-xanh"}>
+                                                        <Link to={"/products"}>
                                                             Trà xanh
                                                         </Link>
                                                     </li>
@@ -119,7 +119,7 @@ const Header = () => {
                         <Link to={""}>
                             <IoCartOutline className="ml-[20px] cursor-pointer  " />
                         </Link>
-                        <Link to={""}>
+                        <Link to={"/login"}>
                             <FaRegUserCircle className="ml-[20px] cursor-pointer " />
                         </Link>
                         <CiMenuBurger
