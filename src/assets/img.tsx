@@ -46,6 +46,12 @@ import tra_tuyet_zoom from "./image/tra-tuyet-zoom1.jpg";
 import zalo_image from "./image/zalo-tra-viet-qr-code.svg";
 import loai_hat_dinh_duong from "./image/5-loai-hat-dinh-duong.jpg";
 
+import kinh_doanh_tra_viet from "./image/kinh-doanh-tra-viet.png";
+import logo_bo_cong_thuong from "./image/logo-da-thong-bao-bo-cong-thuong-1.png";
+import logo_amazon from "./image/ecomerce-icon-amazon.gif";
+import logo_lazada from "./image/ecomerce-icon-lazada.gif";
+import logo_shoppe from "./image/ecomerce-icon-shopee.gif";
+
 export {
     banner_qua_tang_doanh_nghiep,
     banner_am_chen,
@@ -89,4 +95,6 @@ export {
     tra_hoa_cuc,
     tra_tuyet_zoom,
     loai_hat_dinh_duong,
+    kinh_doanh_tra_viet,
+    logo_bo_cong_thuong,logo_amazon,logo_lazada,logo_shoppe
 };
