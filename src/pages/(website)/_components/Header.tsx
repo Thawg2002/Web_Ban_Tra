@@ -1,16 +1,39 @@
-import { logo_traviet, logo_traviet_main } from "@/assets/img";
+import { logo_traviet, logo_traviet_main, tra_o_long } from "@/assets/img";
 import { useEffect, useState } from "react";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import { CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoCartOutline, IoCloseCircleSharp } from "react-icons/io5";
 import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [menuMoblie, setMenuMoblie] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+
+    // Hiệu ứng giỏ hàng
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (isCartOpen) {
+            setTimeout(() => setIsVisible(true), 10);
+        } else {
+            setIsVisible(false);
+        }
+    }, [isCartOpen]);
+
+    useEffect(() => {
+        // Đóng dropdown khi chuyển trang
+        setIsCartOpen(false);
+    }, [location]);
+
+    const toggleCart = () => {
+        setIsCartOpen(!isCartOpen);
+    };
+    //
     const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -107,23 +130,76 @@ const Header = () => {
                         </div>
                     </div>
                     {/* icon header */}
-                    <div className=" flex flex-row text-[25px] items-center ">
+                    <div className="flex flex-row text-[25px] items-center">
                         <div className="relative">
                             <input
-                                className="hidden lg:block border rounded-xl font-serif text-[16px] w-[200px] h-[40px] p-2 mr-2 "
+                                className="hidden lg:block border rounded-xl font-serif text-[16px] w-[200px] h-[40px] p-2 mr-2"
                                 type="text"
                                 placeholder="Seach..."
                             />
-                            <CiSearch className="hidden lg:block absolute top-0 right-0 mr-5 mt-2 " />
+                            <CiSearch className="hidden lg:block absolute top-0 right-0 mr-5 mt-2" />
                         </div>
-                        <Link to={""}>
-                            <IoCartOutline className="ml-[20px] cursor-pointer  " />
-                        </Link>
-                        <Link to={"/login"}>
-                            <FaRegUserCircle className="ml-[20px] cursor-pointer " />
+                        <div className="relative">
+                            <IoCartOutline
+                                className="ml-[20px] cursor-pointer"
+                                onClick={toggleCart}
+                            />
+                            {/* Cart Dropdown */}
+                            {isCartOpen && (
+                                <div
+                                    className={`absolute right-0 mt-2 w-80 bg-pink-600 text-white rounded-xl shadow-xl p-4 transition-transform duration-500 ease-in-out transform ${
+                                        isVisible
+                                            ? "opacity-100 scale-x-100 scale-y-100"
+                                            : "opacity-0 scale-x-0 scale-y-0"
+                                    }`}
+                                >
+                                    <div className="mb-4 flex items-center">
+                                        <img
+                                            src={tra_o_long}
+                                            alt="Sản phẩm Trà Ô Long"
+                                            className="w-16 h-16 rounded-lg mr-4 object-cover"
+                                        />
+                                        <div>
+                                            <h2 className="font-normal text-xs leading-tight">
+                                                Quà Tặng Người Mới Uống Trà -
+                                                Trà Ô Long, Trà Sâm Dứa
+                                            </h2>
+                                            <p className="mt-2 text-xs text-gray-200">
+                                                1 x 522.000 đ
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="border-t border-red-300 pt-4">
+                                        <div className="flex justify-between items-center mb-4">
+                                            <span className="font-bold text-base">
+                                                Tổng số phụ:
+                                            </span>
+                                            <span className="font-bold text-base">
+                                                522.000 đ
+                                            </span>
+                                        </div>
+
+                                        <button className="w-full mt-3 bg-white text-red-600 font-medium text-sm py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-red-50">
+                                            Thanh Toán
+                                        </button>
+                                        <button className="w-full mt-2 text-white font-medium text-base py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-red-500">
+                                            Xem Giỏ Hàng
+                                        </button>
+                                    </div>
+                                    <div className="mt-4 text-center text-sm text-red-100">
+                                        Miễn phí giao hàng cho đơn trên
+                                        1.000.000 đ
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Dropdown end  */}
+                        <Link to="/login">
+                            <FaRegUserCircle className="ml-[20px] cursor-pointer" />
                         </Link>
                         <CiMenuBurger
-                            className="ml-[20px] lg:hidden "
+                            className="ml-[20px] lg:hidden"
                             onClick={toggleMenu}
                         />
                     </div>
