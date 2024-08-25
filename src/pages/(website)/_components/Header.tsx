@@ -16,7 +16,7 @@ const Header = () => {
     };
     return (
         <header className=" padding py-[10px]">
-            <div className=" flex justify-between lg:ml-[69px]">
+            <div className=" flex justify-between ">
                 <div className="flex ">
                     {/* logo */}
                     <div className="">
@@ -112,9 +112,8 @@ const Header = () => {
             )}
             {/* menu moblie */}
             <div
-                className={`fixed top-0 right-0 h-full w-64 bg-white z-50 transform ${
-                    menuOpen ? "translate-x-0" : "translate-x-full"
-                } transition-transform duration-400 ease-in-out`}
+                className={`fixed top-0 right-0 h-full w-64 bg-white z-50 transform ${menuOpen ? "translate-x-0" : "translate-x-full"
+                    } transition-transform duration-400 ease-in-out`}
             >
                 <div className="flex justify-end">
                     <IoCloseCircleSharp
