@@ -43,26 +43,6 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="relative">
-                    <img src={`${banner_qua_tang_doanh_nghiep}`} alt="" />
-                    <div className="absolute left-0 top-0 bottom-0 flex flex-col  px-[15px] lg:justify-center ">
-                        <h2 className="text-white text-[73px] mx-auto font-normall mt-0 mr-[10%] mb-[25px] ml-[15%] ">
-                            Qùa tặng doanh nghiệp<p></p>
-                        </h2>
-                        <div className="mt-0 mr-[10%] mb-[25px] ml-[15%] ">
-                            <p className="text-white mb-[25px] ">
-                                In logo thương hiệu , đăng ký miễn phí
-                            </p>
-                        </div>
-                        <div className="mt-0 mr-[10%] mb-[25px] ml-[15%] ">
-                            <Link to={""}>
-                                <button className="bg-[#d82253] text-white py-[18px] px-[16px]  ">
-                                    HIỂU THÊM
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="relative">
                     <img src={`${banner_banh_trung_thu_4}`} alt="" />
                     <div className="absolute right-0 top-0 bottom-0 flex flex-col px-[15px] lg:justify-center lg:items-end">
                         <h2 className="text-[#000] text-[73px] mx-auto font-normall mt-0 mr-[10%] mb-[25px] ml-[15%] md:text-end">
