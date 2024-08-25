@@ -1,6 +1,7 @@
 import AboutPage from "@/pages/(website)/about/page";
 import HomePage from "@/pages/(website)/home/page";
 import LayoutWebsite from "@/pages/(website)/layout";
+import CheckoutPage from "@/pages/(website)/order/page";
 import ProductCategory from "@/pages/(website)/product/category/page";
 import ProductDetail from "@/pages/(website)/product/id/page";
 import { Route, Routes } from "react-router-dom";
@@ -14,6 +15,7 @@ const Router = () => {
                     <Route path="products" element={<ProductCategory />} />
                     <Route path="products/:id" element={<ProductDetail />} />
                     <Route path="about" element={<AboutPage />} />
+                    <Route path="checkout" element={<CheckoutPage />} />
                 </Route>
             </Routes>
         </>
